@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as BS
 import tkinter as tk
+# 'nj bpvtytybt d rjvvbnt
 
 iskl = ("", "Мобильная версия", "Главная", "О сайте", "Частые вопросы (FAQ)", "Беларусь", "Литва", "Россия", "Украина",
         "Все страны", "Москва (ВДНХ)", "См. на карте", "Контакты", ">>>")
@@ -19,7 +20,7 @@ class Window:
         self.entry = tk.Entry(self.root, width=50)
         self.entry.grid(row=1, column=0, sticky="E")
 
-        self.btn = tk.Button(self.root, text="Ищи!",command=lambda x=links:self.check_input(x))
+        self.btn = tk.Button(self.root, text="Ищи!", command=lambda x=links: self.check_input(x))
         self.btn.grid(row=1, column=1, sticky="W")
 
         self.lbl2 = tk.Label(self.root, wraplength=800, font=("Comic sans", 14))
@@ -39,6 +40,9 @@ class Window:
             return
         else:
             self.parse_wthr(links[town])
+
+    def test_func(self):
+        pass
 
     def parse_wthr(self, link):
         city_wthr = Weather(link)
